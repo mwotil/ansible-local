@@ -1,0 +1,16 @@
+---
+# tasks file for ansible-local
+- name: Add ansible user
+  user:
+   name: ansible
+   state: present
+   generate_ssh_key: true
+- name: Ensure NTP is installed
+  apt:
+   name: ntp
+   state: present
+- name: Ensure NTP is started
+  service:
+   name: ntp
+   state: started
+
