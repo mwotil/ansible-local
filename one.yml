@@ -2,4 +2,5 @@
 - name: Setup
   hosts: all
   sudo : true
-  tasks:
+  roles:
+   - ansible-local
